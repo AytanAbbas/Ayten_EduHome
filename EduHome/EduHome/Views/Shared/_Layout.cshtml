@@ -1,0 +1,237 @@
+﻿@model VmLayout
+@inject AppDbContext _context 
+<!doctype html>
+<html class="no-js" lang="en">
+
+<!-- Mirrored from preview.hasthemes.com/eduhome/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Dec 2021 20:30:27 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Eduhome - Educational HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/meanmenu.css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/et-line-icon.css">
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Header Area Start -->
+    <header class="top">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="header-top-left">
+                            <p>@_context.Settings.FirstOrDefault().Phone1</p>
+                         
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="header-top-right text-right">
+                            <ul>
+                                <li><a asp-controller="Login" asp-action="Index">login</a></li>
+                                <li><a asp-controller="Signup" asp-action="Index">signup</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-area two header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="logo">
+                            <a href="index.html"><img src="~/img/logo/@_context.Settings.FirstOrDefault().Logo" alt="eduhome" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-6">
+                        <div class="content-wrapper text-right">
+                            <!-- Main Menu Start -->
+                            <div class="main-menu">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a href="index.html">Home</a>
+                                            <ul>
+                                                <li><a href="index.html">Home One</a></li>
+                                                <li><a href="index-2.html">Home Two</a></li>
+                                                <li><a href="index-3.html">Home Three</a></li>
+                                                <li><a href="index-4.html">Home Four</a></li>
+                                                <li><a href="index-5.html">Home Five</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a asp-controller="AboutController1" asp-action="Index">About</a></li>
+                                        <li>
+                                            <a asp-controller="Courses" asp-action="Index">courses</a>
+                                            <ul>
+                                                <li><a asp-controller="Courses" asp-action="Index">courses</a></li>
+                                                <li><a asp-controller="CourseDetails" asp-action="Index">courses details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Event" asp-action="Index">event</a>
+                                            <ul>
+                                                <li><a asp-controller="Event" asp-action="Index">event</a></li>
+                                                <li><a asp-controller="EventLeft" asp-action="Index">event left sidebar</a></li>
+                                                <li><a asp-controller="EventRight" asp-action="Index">event right sidebar</a></li>
+                                                <li><a asp-controller="EventDetails" asp-action="Index">event details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="hidden-sm">
+                                            <a asp-controller="Teacher" asp-action="Index">teacher</a>
+                                            <ul>
+                                                <li><a asp-controller="Teacher" asp-action="Index">teacher</a></li>
+                                                <li><a asp-controller="TeacherDetails" asp-action="Index">teacher details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Blog" asp-action="Index">blog</a>
+                                            <ul>
+                                                <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
+                                                <li><a asp-controller="BlogLeft" asp-action="Index">blog left sidebar</a></li>
+                                                <li><a asp-controller="BlogRight" asp-action="Index">blog righ sidebar</a></li>
+                                                <li><a asp-controller="BlogDetails" asp-action="Index">blog details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+                                        <li><a href="#">Buy Now</a>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!--Search Form Start-->
+                            <div class="search-btn">
+                                <ul data-toggle="dropdown" class="header-search search-toggle">
+                                    <li class="search-menu">
+                                        <i class="fa fa-search"></i>
+                                    </li>
+                                </ul>
+                                <div class="search">
+                                    <div class="search-form">
+                                        <form id="search-form" action="#">
+                                            <input type="search" placeholder="Search here..." name="search" />
+                                            <button type="submit">
+                                                <span><i class="fa fa-search"></i></span>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End of Search Form-->
+                            <!-- Main Menu End -->
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="mobile-menu hidden-lg hidden-md hidden-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+    @RenderBody()
+    <!-- Footer Start -->
+    <footer class="footer-area">
+        <div class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-widget pr-60">
+                            <div class="footer-logo pb-25">
+                                <a href="index.html"><img src="~/img/logo/@_context.Settings.FirstOrDefault().Logo" alt="eduhome"></a>
+                            </div>
+                            <p>@_context.Settings.FirstOrDefault().Content</p>
+                            <div class="footer-social">
+                                <ul>
+                                    @foreach (var item in _context.Socials)
+                                    {
+                                        <li><a href="#"><i class="@item.Icon"></i></a></li>
+                                    }
+                                    @*<li><a href="#"><i class="zmdi zmdi-facebook"></i></a></li>
+                                      <li><a href="#"><i class="zmdi zmdi-pinterest"></i></a></li>
+                                      <li><a href="#"><i class="zmdi zmdi-vimeo"></i></a></li>
+                                      <li><a href="#"><i class="zmdi zmdi-twitter"></i></a></li>*@
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-widget">
+                            <h3>information</h3>
+                            <ul>
+                         
+                                <li><a href="#">addmission</a></li>
+                                <li><a href="#">Academic Calender</a></li>
+                                <li><a href="event.html">Event List</a></li>
+                                <li><a href="#">Hostel &amp; Dinning</a></li>
+                                <li><a href="#">TimeTable</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <div class="single-widget">
+                            <h3>useful links</h3>
+                            <ul>
+                                <li><a href="course.html">our courses</a></li>
+                                <li><a href="about.html">about us</a></li>
+                                <li><a href="teacher.html">teachers &amp; faculty</a></li>
+                                <li><a href="#">teams &amp; conditions</a></li>
+                                <li><a href="event.html">our events</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-widget">
+                            <h3>get in touch</h3>
+                            <p>@_context.Settings.FirstOrDefault().Address</p>
+                            <p>@_context.Settings.FirstOrDefault().Phone2<br>@_context.Settings.FirstOrDefault().Phone3</p>
+                            <p>@_context.Settings.FirstOrDefault().Email1<br>@_context.Settings.FirstOrDefault().Email2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>Copyright © <a href="#" target="_blank">HasTech</a> 2017. All Right Reserved By Hastech.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="~/js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.meanmenu.js"></script>
+    <script src="~/js/jquery.magnific-popup.js"></script>
+    <script src="~/js/ajax-mail.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/jquery.mb.YTPlayer.js"></script>
+    <script src="~js/jquery.nicescroll.min.js"></script>
+    <script src="~/js/plugins.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/85735e67ff.js" crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from preview.hasthemes.com/eduhome/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Dec 2021 20:30:33 GMT -->
+</html>
